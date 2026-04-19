@@ -1,0 +1,5 @@
+Time,EventID,Process,CommandLine,User
+2026-04-17 10:10:00,1,powershell.exe,powershell -enc aW52b2tl,user1
+2026-04-17 10:11:00,1,cmd.exe,cmd.exe /c dir,user2
+2026-04-17 10:12:00,1,powershell.exe,powershell -nop -w hidden,user3
+2026-04-17 10:13:00,1,notepad.exe,notepad.exe,user1
