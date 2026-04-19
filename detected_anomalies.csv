@@ -1,0 +1,3 @@
+_time,failed_logins,suspicious_processes,anomaly,anomaly_label,severity,explanation
+2026-04-17 10:00:00,5.0,0.0,-1,ANOMALY,HIGH,HIGH severity: 5 failed logins detected from single source. Possible brute-force or unauthorized access attempt.
+2026-04-17 10:13:00,0.0,0.0,-1,ANOMALY,LOW,LOW severity: Anomalous activity detected. Review logs for unusual patterns.
