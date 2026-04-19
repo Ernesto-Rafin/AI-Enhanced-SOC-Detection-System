@@ -5,9 +5,13 @@ Most security tools catch threats they already know about. This system uses mach
 How It Works:
 
 Step 1. Real Windows login logs and Sysmon process logs are collected and preprocessed into a combined dataset.
+
 Step 2. An Isolation Forest machine learning model analyzes the data and flags anything that looks abnormal including brute force login attempts and suspicious PowerShell or CMD execution.
+
 Step 3. Each detected anomaly is classified by severity and an explanation is generated automatically.
+
 Step 4. The classified alerts are forwarded to Splunk Enterprise via HTTP Event Collector and appear as searchable events in the SIEM.
+
 Step 5. Everything is also visualized in an interactive Streamlit dashboard with severity filtering and incident explanations.
 
 Technologies Used:
