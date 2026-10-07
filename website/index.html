@@ -144,10 +144,9 @@ h1 em { color: var(--accent); }
 .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 .portrait { position: relative; justify-self: end; width: 100%; max-width: 290px; }
-.portrait-frame { border-radius: 22px; overflow: hidden; aspect-ratio: 3 / 4; background: var(--bg-soft); box-shadow: 0 30px 60px -30px rgba(18,20,26,.45); position: relative; }
+.portrait-frame { border-radius: 20px; border: 1px solid var(--line); overflow: hidden; aspect-ratio: 3 / 4; background: var(--bg-soft); box-shadow: 0 30px 60px -30px rgba(18,20,26,.45); position: relative; }
 .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
-.portrait::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 1px solid var(--line); border-radius: 22px; z-index: -1; }
-.badge { position: absolute; left: -28px; bottom: 34px; background: var(--bg-elev); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; box-shadow: var(--shadow); display: flex; gap: 12px; align-items: center; }
+.badge { margin-top: 14px; background: var(--bg-elev); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; box-shadow: var(--shadow); display: flex; gap: 12px; align-items: center; }
 .badge-ic { width: 36px; height: 36px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; flex: none; }
 .badge-ic svg { width: 18px; height: 18px; }
 .badge b { display: block; font-size: .88rem; font-weight: 600; line-height: 1.3; }
@@ -314,8 +313,9 @@ ul.pts li::before { content: ""; position: absolute; left: 2px; top: .72em; widt
 
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-  .portrait { justify-self: start; max-width: 260px; margin-left: 18px; }
+  .hero-grid { grid-template-columns: 1fr 230px; gap: 40px; }
+  .portrait { max-width: 230px; }
+  .badge { padding: 10px 12px; }
   .sec-head, .sec-body { grid-template-columns: 1fr; gap: 14px; }
   .sec-body > .side { display: none; }
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
@@ -331,6 +331,9 @@ ul.pts li::before { content: ""; position: absolute; left: 2px; top: .72em; widt
 }
 @media (max-width: 600px) {
   body { font-size: 16px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .portrait { justify-self: stretch; max-width: none; order: -1; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; align-items: end; }
+  .badge { margin-top: 0; }
   .wrap { padding: 0 16px; }
   .hero { padding: 44px 0 44px; }
   .lede { font-size: 1.08rem; }
@@ -345,7 +348,6 @@ ul.pts li::before { content: ""; position: absolute; left: 2px; top: .72em; widt
   .edu { grid-template-columns: 1fr; }
   .gpa { text-align: left; }
   .pub-title { font-size: 1.5rem; }
-  .badge { left: -12px; }
   .contact-in { padding: 72px 0 60px; }
   .about p:first-child::first-letter { font-size: 3.4rem; }
   .pipeline { flex-direction: column; overflow: visible; }
